@@ -11,7 +11,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        final DeveloperuBD developeruBD= new DeveloperuBD(getApplicationContext());
+        final DeveloperuBD developeruBD= new DeveloperuBD(getApplicationContext(),"Developeru.bd",null,1);
         developeruBD.agredarDatos("1", "rjtorres", "rjtorres", "rjtorres@espol.edu.ec", "0999999999","1");
         developeruBD.agredarDatos("1", "bcali", "bcali", "bcali@espol.edu.ec", "0888888888","2");
         developeruBD.agredarDatos("1", "jareva", "jareva", "jareva@espol.edu.ec", "0777777777","1");
