@@ -7,27 +7,40 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DeveloperuBD extends SQLiteOpenHelper {
     private static final String Nombre_BD= "Developeru.bd";
     private static final int VERSION_BD=1;
-    private static final String TABLA_DATOS="CREATE TABLE DATOS (IDDATOS TEXT PRIMARY KEY, USUARIO TETX, CONTRASEÑA TEXT, CORREO TEXT, CELULAR" +
-            "TEXT, FAVORITO TEXT)";
-    private static final String TABLA_PELICULAS= "CREATE TABLE PELICULAS (IDPELI TEXT NOT NULL CONSTRAINT FK_ID_PELI REFERENCES DATOS(IDDATOS) ON DELETE CASCADE ON UPDATE CASCADE" +
-            ", TITULO TEXT, AUTOR TEXT, EDITORIAL TEXT, DESCRIPCION TEXT, CATEGORRIA TEXT, URL TEXT)";
+    private static final String TABLA_DATOS="" +
+            "CREATE TABLE DATOS (" +
+            "IDDATOS TEXT PRIMARY KEY," +
+            " USUARIO TETX, " +
+            "CONTRASEÑA TEXT, " +
+            "CORREO TEXT, " +
+            "CELULAR TEXT, " +
+            "FAVORITO TEXT)";
 
-    public DeveloperuBD(Context context){
-        super(context, Nombre_BD, null, VERSION_BD);
+    private static final String TABLA_LIBROS= "CREATE TABLE PELICULAS (" +
+            "IDLIBRO TEXT NOT NULL CONSTRAINT FK_ID_PELI REFERENCES DATOS(IDDATOS) ON DELETE CASCADE ON UPDATE CASCADE, " +
+            "TITULO TEXT, " +
+            "AUTOR TEXT, " +
+            "EDITORIAL TEXT, " +
+            "DESCRIPCION TEXT, " +
+            "CATEGORRIA TEXT, " +
+            "URL TEXT)";
+
+    public DeveloperuBD(Context context, String name,  SQLiteDatabase.CursorFactory factory, int version) {
+        super(context, name="Developeru.bd", factory, version=1);
     }
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         sqLiteDatabase.execSQL(TABLA_DATOS);
-        sqLiteDatabase.execSQL(TABLA_PELICULAS);
+        sqLiteDatabase.execSQL(TABLA_LIBROS);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ TABLA_DATOS);
         sqLiteDatabase.execSQL(TABLA_DATOS);
-        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ TABLA_PELICULAS);
-        sqLiteDatabase.execSQL(TABLA_PELICULAS);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+ TABLA_LIBROS);
+        sqLiteDatabase.execSQL(TABLA_LIBROS);
     }
     public void agredarDatos(String id, String usuario, String contraseña, String correo, String celular,String nuPelicula){
         SQLiteDatabase bd= getWritableDatabase();
