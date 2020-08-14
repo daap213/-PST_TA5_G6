@@ -13,6 +13,7 @@ public class BaseDatos implements Serializable {
         developeruBD.agredarDatos("1", "rjtorres", "rjtorres", "rjtorres@espol.edu.ec", "0999999999","1");
         developeruBD.agredarDatos("2", "bcali", "bca eli", "bcali@espol.edu.ec", "0888888888","2");
         developeruBD.agredarDatos("3", "jareva", "jareva", "jareva@espol.edu.ec", "0777777777","1");
+        developeruBD.agredarDatos("4", "tkgarcia", "tkgr", "tkgarcia@espol.edu.ec", "0555555555","2");
 
 
         developeruBD.agredarPeliculas(1,"1", "Yo antes de ti", "Jojo Moyes", "Penguin Books",
