@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">AMST6</string>
+    <string name="libros_seg_n_su_categoria">Libros según su categoria:</string>
+    <string name="comedia">Comedia</string>
+    <string name="terror">Terror</string>
+    <string name="juvenil">Juvenil</string>
+    <string name="acci_n">Acción</string>
+    <string name="misterio">Misterio</string>
+    <string name="romance">Romance</string>
+    <string name="icono1">TODO</string>
 </resources>
