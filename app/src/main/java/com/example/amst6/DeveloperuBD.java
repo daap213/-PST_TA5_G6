@@ -8,7 +8,7 @@ public class DeveloperuBD extends SQLiteOpenHelper {
     private static final String Nombre_BD= "Developeru.bd";
     private static final int VERSION_BD=1;
     private static final String TABLA_DATOS="" +
-            "CREATE TABLE DATOS (" +
+            " CREATE TABLE DATOS (" +
             "IDDATOS TEXT PRIMARY KEY," +
             " USUARIO TETX, " +
             "CONTRASEÑA TEXT, " +
@@ -16,8 +16,9 @@ public class DeveloperuBD extends SQLiteOpenHelper {
             "CELULAR TEXT, " +
             "FAVORITO TEXT)";
 
-    private static final String TABLA_LIBROS= "CREATE TABLE PELICULAS (" +
-            "IDLIBRO TEXT NOT NULL CONSTRAINT FK_ID_PELI REFERENCES DATOS(IDDATOS) ON DELETE CASCADE ON UPDATE CASCADE, " +
+    private static final String TABLA_LIBROS= " CREATE TABLE LIBROS (" +
+            "IDLIBRO INTEGER PRIMARY KEY," +
+            "IDDATOS TEXT,"+
             "TITULO TEXT, " +
             "AUTOR TEXT, " +
             "EDITORIAL TEXT, " +
@@ -26,7 +27,7 @@ public class DeveloperuBD extends SQLiteOpenHelper {
             "URL TEXT)";
 
     public DeveloperuBD(Context context, String name,  SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name="Developeru.bd", factory, version=1);
+        super(context, name, factory, version);
     }
 
     @Override
@@ -45,14 +46,14 @@ public class DeveloperuBD extends SQLiteOpenHelper {
     public void agredarDatos(String id, String usuario, String contraseña, String correo, String celular,String nuPelicula){
         SQLiteDatabase bd= getWritableDatabase();
         if(bd!= null){
-            bd.execSQL("INSERT INTO DATE VALUES('"+id+"','"+usuario+"','"+contraseña+"','"+correo+"','"+celular+"','"+nuPelicula+"')");
+            bd.execSQL("INSERT INTO DATOS VALUES('"+id+"','"+usuario+"','"+contraseña+"','"+correo+"','"+celular+"','"+nuPelicula+"')");
             bd.close();
         }
     }
-    public void agredarPeliculas(String idPel, String titulo, String autor, String editorial, String descripcion,String categoria, int URL){
+    public void agredarPeliculas(Integer i,String idDat, String titulo, String autor, String editorial, String descripcion,String categoria, int URL){
         SQLiteDatabase bd= getWritableDatabase();
         if(bd!= null){
-            bd.execSQL("INSERT INTO DATE VALUES('"+idPel+"','"+titulo+"','"+autor+"','"+editorial+"','"+descripcion+"','"+categoria+"','"+URL+"')");
+            bd.execSQL("INSERT INTO LIBROS VALUES('"+i+"','"+idDat+"','"+titulo+"','"+autor+"','"+editorial+"','"+descripcion+"','"+categoria+"','"+URL+"')");
             bd.close();
         }
     }
