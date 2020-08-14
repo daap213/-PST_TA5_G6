@@ -1,19 +1,3 @@
 <resources>
     <string name="app_name">AMST6</string>
-    <string name="libros_seg_n_su_categoria">Libros según su categoria:</string>
-    <string name="comedia">Comedia</string>
-    <string name="terror">Terror</string>
-    <string name="juvenil">Juvenil</string>
-    <string name="acci_n">Acción</string>
-    <string name="misterio">Misterio</string>
-    <string name="romance">Romance</string>
-    <string name="icono1">TODO</string>
-    <string name="contrase_a">Contraseña:</string>
-    <string name="ingrese_su_usuario">Ingrese su Usuario</string>
-    <string name="ingrese_su_contrase_a">Ingrese su Contraseña</string>
-    <string name="usuario">Usuario:</string>
-    <string name="ingresar">Ingresar</string>
-    <string name="bienvenido_a">Bienvenido a:</string>
-    <string name="bookstore">BOOKSTORE</string>
-    <string name="continuar">cONTINUAR</string>
 </resources>
