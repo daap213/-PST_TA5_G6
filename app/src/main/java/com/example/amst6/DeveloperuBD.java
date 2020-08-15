@@ -26,8 +26,8 @@ public class DeveloperuBD extends SQLiteOpenHelper {
             "CATEGORRIA TEXT, " +
             "URL TEXT)";
 
-    public DeveloperuBD(Context context, String name,  SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public DeveloperuBD(Context context) {
+        super(context, Nombre_BD, null, VERSION_BD);
     }
 
     @Override

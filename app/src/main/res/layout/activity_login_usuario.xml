@@ -28,7 +28,7 @@
                 android:id="@+id/textView4"
                 android:layout_width="match_parent"
                 android:layout_height="46dp"
-                android:text="@string/usuario"
+                android:text="usuario"
                 android:textAlignment="center"
                 android:textSize="24sp" />
 
@@ -36,7 +36,7 @@
                 android:id="@+id/textView5"
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
-                android:text="@string/contrase_a"
+                android:text="contrase_a"
                 android:textAlignment="center"
                 android:textSize="24sp" />
         </LinearLayout>
@@ -55,7 +55,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/ingrese_su_usuario"
+                android:hint="ingrese_su_usuario"
                 android:inputType="textPersonName"
                 android:autofillHints="" />
 
@@ -64,7 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:hint="@string/ingrese_su_contrase_a"
+                android:hint="ingrese_su_contrase_a"
                 android:inputType="textPassword"
                 android:autofillHints="" />
         </LinearLayout>
@@ -74,6 +74,7 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="ingresar"
         android:text="@string/ingresar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

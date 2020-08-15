@@ -9,10 +9,12 @@ public class BaseDatos implements Serializable {
     }
 
     public void basedatos(Context context){
-        DeveloperuBD developeruBD= new DeveloperuBD(context,"Developeru.bd",null,1);
+        DeveloperuBD developeruBD= new DeveloperuBD(context);
         developeruBD.agredarDatos("1", "rjtorres", "rjtorres", "rjtorres@espol.edu.ec", "0999999999","1");
         developeruBD.agredarDatos("2", "bcali", "bca eli", "bcali@espol.edu.ec", "0888888888","2");
         developeruBD.agredarDatos("3", "jareva", "jareva", "jareva@espol.edu.ec", "0777777777","1");
+
+
 
 
         developeruBD.agredarPeliculas(1,"1", "Yo antes de ti", "Jojo Moyes", "Penguin Books",
@@ -39,6 +41,8 @@ public class BaseDatos implements Serializable {
         developeruBD.agredarPeliculas(8,"1", "el camino de las sombras", "Brent Weeks", "Orbit Books",
                 "La muerte es un arte, y Durzo Blint lo ejecuta a la perfección, sea en una callejuela oscura o en las grandes estancias de palacio.",
                 "Acción",R.drawable.elcaminodelasombra);
+
+
     }
 }
 

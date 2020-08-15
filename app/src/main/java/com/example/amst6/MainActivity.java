@@ -11,9 +11,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_login);
 
         bd= new BaseDatos();
         bd.basedatos(getApplicationContext());
+    }
+
+    public void entrar(View view){
+        Intent i = new Intent(this, home.class);
+        startActivity(i);
     }
 }

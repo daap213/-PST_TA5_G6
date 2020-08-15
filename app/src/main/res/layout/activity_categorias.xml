@@ -13,7 +13,7 @@
         android:layout_height="50dp"
         android:drawingCacheQuality="auto"
         android:gravity="center"
-        android:text="@string/libros_seg_n_su_categoria"
+        android:text="libros_seg_n_su_categoria"
         android:textColor="?attr/colorControlActivated"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@mipmap/icono1"
-        android:contentDescription="@string/icono1" />
+        android:contentDescription="icono1" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -62,7 +62,7 @@
                     android:layout_marginBottom="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/boton_contorno"
-                    android:text="@string/romance"
+                    android:text="romance"
                     android:textColor="@android:color/holo_blue_bright"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -80,7 +80,7 @@
                     android:layout_margin="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/boton_contorno"
-                    android:text="@string/comedia"
+                    android:text="comedia"
                     android:textColor="@android:color/holo_blue_bright"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -97,7 +97,7 @@
                     android:layout_margin="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/boton_contorno"
-                    android:text="@string/terror"
+                    android:text="terror"
                     android:textColor="@android:color/holo_blue_bright"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -114,7 +114,7 @@
                     android:layout_margin="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/boton_contorno"
-                    android:text="@string/juvenil"
+                    android:text="juvenil"
                     android:textColor="@android:color/holo_blue_bright"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -131,7 +131,7 @@
                     android:layout_margin="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/boton_contorno"
-                    android:text="@string/acci_n"
+                    android:text="acci_n"
                     android:textColor="@android:color/holo_blue_bright"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -148,7 +148,7 @@
                     android:layout_margin="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/boton_contorno"
-                    android:text="@string/misterio"
+                    android:text="misterio"
                     android:textColor="@android:color/holo_blue_bright"
                     android:textSize="24sp"
                     android:textStyle="bold" />

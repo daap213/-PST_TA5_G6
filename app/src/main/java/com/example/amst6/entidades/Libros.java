@@ -9,9 +9,9 @@ public class Libros implements Serializable {
     private String editorial;
     private String descripcion;
     private String categoria;
-    private String URL;
+    private int URL;
 
-    public Libros(String idpel, String titulo, String autor, String editorial, String descripcion, String categoria, String URL) {
+    public Libros(String idpel, String titulo, String autor, String editorial, String descripcion, String categoria, int URL) {
         this.idpel = idpel;
         this.titulo = titulo;
         this.autor = autor;
@@ -72,11 +72,11 @@ public class Libros implements Serializable {
         this.categoria = categoria;
     }
 
-    public String getURL() {
+    public int getURL() {
         return URL;
     }
 
-    public void setURL(String URL) {
+    public void setURL(int URL) {
         this.URL = URL;
     }
 }
