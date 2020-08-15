@@ -69,12 +69,11 @@
                 android:autofillHints="" />
         </LinearLayout>
     </LinearLayout>
-
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="ingresar"
+        android:onClick="ingresarM"
         android:text="@string/ingresar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -8,15 +8,15 @@ public class Datos implements Serializable {
     private String contraseña;
     private String correo;
     private String celular;
-    private String nuPelicula;
+    private String favorito;
 
-    public Datos(String id, String usuario, String contraseña, String correo, String celular, String nuPelicula) {
+    public Datos(String id, String usuario, String contraseña, String correo, String celular, String favorito) {
         this.id = id;
         this.usuario = usuario;
         this.contraseña = contraseña;
         this.correo = correo;
         this.celular = celular;
-        this.nuPelicula = nuPelicula;
+        this.favorito = favorito;
     }
     public Datos(){
 
@@ -63,10 +63,10 @@ public class Datos implements Serializable {
     }
 
     public String getNuPelicula() {
-        return nuPelicula;
+        return favorito;
     }
 
     public void setNuPelicula(String nuPelicula) {
-        this.nuPelicula = nuPelicula;
+        this.favorito = nuPelicula;
     }
 }

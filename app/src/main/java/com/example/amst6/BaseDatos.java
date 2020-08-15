@@ -12,9 +12,9 @@ public class BaseDatos implements Serializable {
 
     public void basedatos(Context context){
         DeveloperuBD developeruBD= new DeveloperuBD(context);
-        developeruBD.agredarDatos("1", "rjtorres", "rjtorres", "rjtorres@espol.edu.ec", "0999999999","1");
-        developeruBD.agredarDatos("2", "bcali", "bcali", "bcali@espol.edu.ec", "0888888888","2");
-        developeruBD.agredarDatos("3", "jareva", "jareva", "jareva@espol.edu.ec", "0777777777","1");
+        developeruBD.agredarDatos("1", "rjtorres", "rjtorres", "rjtorres@espol.edu.ec", "0999999999","Accion");
+        developeruBD.agredarDatos("2", "bcali", "bcali", "bcali@espol.edu.ec", "0888888888","terror");
+        developeruBD.agredarDatos("3", "jareva", "jareva", "jareva@espol.edu.ec", "0777777777","romantica");
 
 
 
@@ -40,7 +40,7 @@ public class BaseDatos implements Serializable {
         developeruBD.agredarPeliculas(7,"3", "Los jardines de la luna", "Steven Erikson", "Bantam Books",
                 "Tras guerras interminables y amargas luchas internas, el descontento se ha apoderado del Imperio de Malaz. Incluso las tropas imperiales, siempre ansiosas por derramar sangre, necesitan un respiro.",
                 "Acción",R.drawable.losjardinesdelaluna);
-        developeruBD.agredarPeliculas(8,"1", "el camino de las sombras", "Brent Weeks", "Orbit Books",
+        developeruBD.agredarPeliculas(8,"1", "El camino de las sombras", "Brent Weeks", "Orbit Books",
                 "La muerte es un arte, y Durzo Blint lo ejecuta a la perfección, sea en una callejuela oscura o en las grandes estancias de palacio.",
                 "Acción",R.drawable.elcaminodelasombra);
 

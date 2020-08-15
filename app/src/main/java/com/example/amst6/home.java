@@ -24,11 +24,15 @@ public class home extends AppCompatActivity {
     private PersonaAdapter adapter;
     private List<Libros> items;
     DeveloperuBD sqlLite;
+    String dato= null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_datos);
+
+        dato= getIntent().getStringExtra("dato");
+
         sqlLite = new DeveloperuBD(this);
 
         initViews();
@@ -53,7 +57,18 @@ public class home extends AppCompatActivity {
         List<Libros> itemLists = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = sqlLite.getReadableDatabase();
         Libros libro;
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM LIBROS", null);
+        Integer id= null;
+        Cursor idNom= sqLiteDatabase.rawQuery("SELECT * FROM DATOS WHERE DATOS.IDDATOS",null);
+        boolean ban= true;
+        while(idNom.moveToNext() && ban== true){
+            if(idNom.getString(1).equals(dato)){
+                id= Integer.parseInt(idNom.getString(0));
+
+                ban=false;
+            }
+        }
+        int i=0;
+        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM LIBROS WHERE LIBROS.IDDATOS="+"'"+id+"'", null);
         while (cursor.moveToNext()) {
             libro = new Libros();
             libro.setTitulo(cursor.getString(1));
@@ -64,6 +79,7 @@ public class home extends AppCompatActivity {
             libro.setCategoria(cursor.getString(6));
             libro.setURL(cursor.getInt(7));
             itemLists.add(libro);
+            System.out.println(i++);
         }
         return itemLists;
     }
