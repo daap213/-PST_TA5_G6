@@ -1,17 +1,19 @@
 package com.example.amst6;
 
 import android.content.Context;
+import android.content.Intent;
 
 import java.io.Serializable;
 
 public class BaseDatos implements Serializable {
+
     public BaseDatos() {
     }
 
     public void basedatos(Context context){
         DeveloperuBD developeruBD= new DeveloperuBD(context);
         developeruBD.agredarDatos("1", "rjtorres", "rjtorres", "rjtorres@espol.edu.ec", "0999999999","1");
-        developeruBD.agredarDatos("2", "bcali", "bca eli", "bcali@espol.edu.ec", "0888888888","2");
+        developeruBD.agredarDatos("2", "bcali", "bcali", "bcali@espol.edu.ec", "0888888888","2");
         developeruBD.agredarDatos("3", "jareva", "jareva", "jareva@espol.edu.ec", "0777777777","1");
 
 
@@ -44,5 +46,6 @@ public class BaseDatos implements Serializable {
 
 
     }
+
 }
 
