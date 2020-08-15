@@ -15,19 +15,23 @@ import java.util.List;
 
 public class LoginUsuario extends AppCompatActivity {
     private DeveloperuBD datos;
+    BaseDatos bd;
+    private EditText usu;
+    private EditText contr;
+    private Boolean acceso=Boolean.FALSE;
     
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_usuario);
-
-
+        usu= (EditText) findViewById(R.id.usu);
+        contr= (EditText) findViewById(R.id.contr);
+        bd= new BaseDatos();
+        bd.basedatos(getApplicationContext());
     }
     public void ingresarM(View view) {
-        String usuario=((EditText)findViewById(R.id.usu)).getText().toString();
-        String contraseña=((EditText)findViewById(R.id.contr)).getText().toString();
-        Boolean acceso=Boolean.FALSE;
+        String usuario= usu.getText().toString();
+        String contraseña= contr.getText().toString();
         ArrayList<String> datos = null;
         datos.add("rjtorres");
         datos.add("bcali");
@@ -38,7 +42,8 @@ public class LoginUsuario extends AppCompatActivity {
         }
 
         if(acceso){
-            Intent i = new Intent(this, Login.class );
+            Intent i = new Intent(this, home.class);
+            i.putExtra("dato",usuario);
             startActivity(i);
         }
         else {
