@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.amst6.entidades.Menu;
+
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
@@ -40,9 +42,9 @@ public class LoginUsuario extends AppCompatActivity {
         if (datos.contains(usuario) && datos.contains(contraseña)){
             acceso=Boolean.TRUE;
         }
-
+        //Cambie el intent
         if(acceso){
-            Intent i = new Intent(this, home.class);
+            Intent i = new Intent(this, Menu.class);
             i.putExtra("dato",usuario);
             startActivity(i);
         }

@@ -25,13 +25,15 @@ public class home extends AppCompatActivity {
     private List<Libros> items;
     DeveloperuBD sqlLite;
     String dato= null;
+    String cat=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_datos);
-
+        //Agrege una nueva variable que tendra la categoria (Si se usa)
         dato= getIntent().getStringExtra("dato");
+        cat= getIntent().getStringExtra("categoria");
 
         sqlLite = new DeveloperuBD(this);
 
@@ -54,6 +56,8 @@ public class home extends AppCompatActivity {
     }
 
     public List<Libros> mostrarDatos() {
+        //Deje curso ya establesido
+        Cursor cursor;
         List<Libros> itemLists = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = sqlLite.getReadableDatabase();
         Libros libro;
@@ -67,8 +71,13 @@ public class home extends AppCompatActivity {
                 ban=false;
             }
         }
+        //Agrege un if y cambien el Select, falta agregar la version por usuario donde LIBROS.IDDATOS="+"'"+id+"'"
         int i=0;
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM LIBROS WHERE LIBROS.IDDATOS="+"'"+id+"'", null);
+        if(cat==null){
+            cursor = sqLiteDatabase.rawQuery("SELECT * FROM LIBROS", null);
+        }else {
+            cursor = sqLiteDatabase.rawQuery("SELECT * FROM LIBROS WHERE LIBROS.CATEGORRIA="+"'"+cat+"'", null);
+        }
         while (cursor.moveToNext()) {
             libro = new Libros();
             libro.setTitulo(cursor.getString(1));
