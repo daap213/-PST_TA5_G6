@@ -10,4 +10,17 @@
     <string name="contrase_a">Contraseña:</string>
     <string name="ingrese_su_usuario">(Ingrese su usuario)</string>
     <string name="ingrese_su_contrase_a">(Ingrese su contraseña)</string>
+    <string name="libros_seg_n_su_categoria">Libros según su categoria</string>
+    <string name="icono1">icono1</string>
+    <string name="romance">romance</string>
+    <string name="comedia">comedia</string>
+    <string name="terror">terror</string>
+    <string name="juvenil">juvenil</string>
+    <string name="misterio">misterio</string>
+    <string name="accion">acción</string>
+    <string name="men">Menú</string>
+    <string name="libros">Libros</string>
+    <string name="mis_libros">Mis libros</string>
+    <string name="categoria">Categoria</string>
+    <string name="perfil">Perfil</string>
 </resources>

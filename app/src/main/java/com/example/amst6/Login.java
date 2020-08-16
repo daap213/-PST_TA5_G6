@@ -13,8 +13,9 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
     }
+    //Cambie el intent al main ya que el de LoginUsuario me daba problemas
     public void continuar(View view) {
-        Intent i = new Intent(this, LoginUsuario.class );
+        Intent i = new Intent(this, MainActivity.class );
         startActivity(i);
     }
 

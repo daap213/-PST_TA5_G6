@@ -7,31 +7,31 @@
     android:background="@drawable/fondo_c"
     tools:context=".Categorias">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginStart="60dp"
+        android:contentDescription="@string/icono1"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/icono1" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:drawingCacheQuality="auto"
         android:gravity="center"
-        android:text="libros_seg_n_su_categoria"
+        android:text="@string/libros_seg_n_su_categoria"
         android:textColor="?attr/colorControlActivated"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.641"
+        app:layout_constraintHorizontal_bias="0.745"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginStart="60dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/icono1"
-        android:contentDescription="icono1" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -62,7 +62,8 @@
                     android:layout_marginBottom="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/boton_contorno"
-                    android:text="romance"
+                    android:onClick="botones"
+                    android:text="@string/romance"
                     android:textColor="@android:color/holo_blue_bright"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -80,7 +81,8 @@
                     android:layout_margin="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/boton_contorno"
-                    android:text="comedia"
+                    android:onClick="botones"
+                    android:text="@string/comedia"
                     android:textColor="@android:color/holo_blue_bright"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -97,7 +99,8 @@
                     android:layout_margin="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/boton_contorno"
-                    android:text="terror"
+                    android:onClick="botones"
+                    android:text="@string/terror"
                     android:textColor="@android:color/holo_blue_bright"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -114,7 +117,8 @@
                     android:layout_margin="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/boton_contorno"
-                    android:text="juvenil"
+                    android:onClick="botones"
+                    android:text="@string/juvenil"
                     android:textColor="@android:color/holo_blue_bright"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -131,7 +135,8 @@
                     android:layout_margin="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/boton_contorno"
-                    android:text="acci_n"
+                    android:onClick="botones"
+                    android:text="@string/accion"
                     android:textColor="@android:color/holo_blue_bright"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -148,7 +153,8 @@
                     android:layout_margin="15dp"
                     android:layout_weight="1"
                     android:background="@drawable/boton_contorno"
-                    android:text="misterio"
+                    android:onClick="botones"
+                    android:text="@string/misterio"
                     android:textColor="@android:color/holo_blue_bright"
                     android:textSize="24sp"
                     android:textStyle="bold" />

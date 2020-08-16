@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
+import com.example.amst6.entidades.Menu;
+
 public class MainActivity extends AppCompatActivity {
     BaseDatos bd;
     private EditText et;
@@ -23,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void entrar(View view){
-        Intent i = new Intent(this, home.class);
+        //Cambie el intent
+        Intent i = new Intent(this, Menu.class);
         i.putExtra("dato",et.getText().toString());
         startActivity(i);
     }
