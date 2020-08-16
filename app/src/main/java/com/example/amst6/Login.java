@@ -15,7 +15,7 @@ public class Login extends AppCompatActivity {
     }
     //Cambie el intent al main ya que el de LoginUsuario me daba problemas
     public void continuar(View view) {
-        Intent i = new Intent(this, MainActivity.class );
+        Intent i = new Intent(this, Login_Usuario.class );
         startActivity(i);
     }
 

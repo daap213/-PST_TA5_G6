@@ -8,11 +8,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".entidades.Menu"></activity>
-        <activity android:name=".Categorias"></activity>
-        <activity android:name=".LoginUsuario"></activity>
-        <activity android:name=".MainActivity"></activity>
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="">
+        <activity android:name=".Login_Usuario"/>
+        <activity android:name=".entidades.Menu" />
+        <activity android:name=".Categorias" />
+        <activity android:name=".MainActivity" />
         <activity android:name=".home" />
         <activity android:name=".Login">
             <intent-filter>
